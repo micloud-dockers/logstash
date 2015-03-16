@@ -13,5 +13,6 @@ RUN cd / && curl -O https://download.elasticsearch.org/logstash/logstash/logstas
 RUN cd /logstash-1.4.2 && ./bin/plugin install contrib
 RUN echo -e '\n# logstash\nexport PATH="/logstash-1.4.2/bin:$PATH"' >> /root/.bashrc
 
+RUN rm /logstash-1.4.2.tar.gz
 
 WORKDIR /data
